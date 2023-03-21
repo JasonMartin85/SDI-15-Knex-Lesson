@@ -12,8 +12,9 @@ app.get('/pets',(req,res)=>{
   knex('pet')
     .select('*')
     .then(pets => {
-      var petNames = pets.map(pet => pet.name)
-      res.json(petNames);
+      // var petNames = pets.map(pet => pet.name)
+      // res.json(petNames);
+      res.send(pets)
     })
 })
 
